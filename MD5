@@ -1,0 +1,16 @@
+3f6d39689572ffc6955d0de22b88e9c3 *DESCRIPTION
+4b4dc26a2562dc2187d00821cbe32e36 *LICENSE
+4b4a95efc195552823cbe2b6923db362 *NAMESPACE
+9aa10472b3622cd83eeee3058db3ae4e *NEWS.md
+37cf363825b629026d7a423ebf50ab5a *R/database.R
+1f488ee6e75c366c8584542f57326a21 *R/methods.R
+c3c4f326dca8c8e795db55b8da1d242b *R/package.R
+a37713cbdb29127c4e68b103c3767bdb *R/request.R
+6cd1949e458a43656c057a196a632af2 *R/settings.R
+c751abddc9a7ff6175afb6e68c8b9018 *R/zzz.R
+233a22fa5430d3227e334216b63b04bf *man/imf.data-package.Rd
+63a0a2f9a8836eba31e3ffac204b12ef *man/list_datasets.Rd
+f4d73abf7da64b7ff87a6ceaf9d3c2fe *man/load_datasets.Rd
+ef7f25f7ba423f03250f545a1b9e63f5 *man/mt_compact_data.Rd
+a144f113508088575e9ad36284751210 *man/mt_data_structure.Rd
+88030fcead6b5fddbc83a0932fb23a18 *man/mt_dataflow.Rd

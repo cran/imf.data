@@ -1,0 +1,28 @@
+Package: imf.data
+Title: An Interface to IMF (International Monetary Fund) Data JSON API
+Version: 0.1.0
+Authors@R: 
+    person("Pedro", "Baltazar",, "pedrobtz@gmail.com", role = c("aut", "cre"))
+Description: A straightforward interface for accessing the IMF 
+    (International Monetary Fund) data JSON API, 
+    available at <https://data.imf.org/>. This package offers direct access to 
+    the primary API endpoints: Dataflow, DataStructure, and CompactData. 
+    And, it provides an intuitive interface for exploring available 
+    dimensions and attributes, as well as querying individual time-series datasets. 
+    Additionally, the package implements a rate limit on API calls to reduce the 
+    chances of exceeding service limits (limited to 10 calls every 5 seconds) 
+    and encountering response errors.
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.2.3
+Imports: methods, utils, stats, curl, jsonlite
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+URL: https://pedrobtz.github.io/imf.data/
+BugReports: https://github.com/pedrobtz/imf.data/issues
+NeedsCompilation: no
+Packaged: 2023-11-07 05:33:48 UTC; pbtz
+Author: Pedro Baltazar [aut, cre]
+Maintainer: Pedro Baltazar <pedrobtz@gmail.com>
+Repository: CRAN
+Date/Publication: 2023-11-07 18:40:02 UTC
