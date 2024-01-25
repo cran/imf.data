@@ -1,6 +1,6 @@
 Package: imf.data
 Title: An Interface to IMF (International Monetary Fund) Data JSON API
-Version: 0.1.3
+Version: 0.1.4
 Authors@R: 
     person("Pedro", "Baltazar",, "pedrobtz@gmail.com", role = c("aut", "cre"))
 Description: A straightforward interface for accessing the IMF 
@@ -21,8 +21,8 @@ Config/testthat/edition: 3
 URL: https://pedrobtz.github.io/imf.data/
 BugReports: https://github.com/pedrobtz/imf.data/issues
 NeedsCompilation: no
-Packaged: 2023-11-27 20:44:10 UTC; pbtz
+Packaged: 2024-01-25 16:00:55 UTC; pbtz
 Author: Pedro Baltazar [aut, cre]
 Maintainer: Pedro Baltazar <pedrobtz@gmail.com>
 Repository: CRAN
-Date/Publication: 2023-11-28 10:00:06 UTC
+Date/Publication: 2024-01-25 22:20:02 UTC
