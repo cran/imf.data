@@ -2,12 +2,12 @@
 #' List all available Time Series Datasets
 #'
 #' @return a data.frame with columns 'Id' and 'Description'.
-#' @export
 #'
 #' @examples
 #' d <- list_datasets()
 #' head(d)
-
+#'
+#' @export
 list_datasets <- function(){
   x <- mt_dataflow()
   if(is.null(x)) return(invisible(NULL))
@@ -29,7 +29,6 @@ list_datasets <- function(){
 #' function 'get_series' to retrieve time-series data.
 #'
 #' @examples
-#' IFS <- load_datasets("IFS")
 #' DOT <- load_datasets("DOT")
 #'
 #' DOT$get_series(freq = "M",
@@ -38,8 +37,6 @@ list_datasets <- function(){
 #'                counterpart_area = c("B0","W00"),
 #'                start_period = "2022-01-01",
 #'                end_period = "2022-12-31")
-#'
-#' DTS <- load_datasets(c("DOT","IFS"))
 #'
 #' @name load_datasets
 #' @export
@@ -196,7 +193,7 @@ make_get_function <- function(params = NULL,
 utils::globalVariables(c("ID"))
 
 template_get <- function(start_period = NULL, end_period = NULL){
-  x <- eval(as_list(match.call()))
+  x <- eval.parent(as_list(match.call()))
   return(get0(x, ID))
 }
 
