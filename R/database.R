@@ -71,9 +71,12 @@ load_datasets <- local({
       return(invisible(NULL))
     }
 
-    series <- cbind_series(transform_series(series, dimensions))
-    row.names(series) <- NULL
-    return(series)
+    ls_series <- transform_series(series, dimensions)
+    dt_series <- cbind_series(ls_series)
+    row.names(dt_series) <- NULL
+    attr(dt_series, "original_data") <- series
+
+    return(dt_series)
   }
 
   function(id, use_cache = TRUE){
@@ -194,7 +197,8 @@ utils::globalVariables(c("ID"))
 
 template_get <- function(start_period = NULL, end_period = NULL){
   x <- eval.parent(as_list(match.call()))
-  return(get0(x, ID))
+  ans <- get0(x, ID)
+  return(ans)
 }
 
 
@@ -251,6 +255,7 @@ transform_series <- function(series, dimensions){
     stopifnot(all(ls_names %in% names(x)))
 
     d <- rbind_list(x$Obs)
+    d <- d[, c("@TIME_PERIOD","@OBS_VALUE") ]
     colnames(d) <- c("TIME_PERIOD", paste(x[ls_names], collapse = "."))
 
     return(d)
